@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     1.1.0
+@version     1.1.1
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -178,6 +178,87 @@
         }
         #layout-sidebar .quota-widget .bar {
             border: 1px solid var(--new-white);
+        }
+
+        /* New message, only HTML */
+        #layout-sidebar.sidebar-right {
+            border-left: 1px solid var(--new-grey);
+        }
+        #compose-content {
+            background: var(--new-black);
+        }
+        #compose-content .custom-select,
+        #compose-content .form-control {
+            background: var(--new-grey);
+            border: 1px solid var(--new-gray);
+            color: var(--new-white);
+        }
+        #compose-content .input-group-text {
+            color: var(--new-white);
+            background-color: var(--new-black-dark);
+            border: 1px solid var(--new-grey);
+        }
+        #compose-content .form-control:focus,
+        #compose-options .form-control:focus {
+            background-color: var(--new-grey);
+            color: var(--new-white);
+        }
+        #compose-content .html-editor .editor-toolbar {
+            border-bottom: 1px solid var(--new-black-dark);
+            background-color: var(--new-black-dark);
+        }
+        #compose-content .formcontent label,
+        #compose-content .recipient-input input,
+        #compose-options .row label.col-form-label {
+            color: var(--new-white);
+        }
+        #compose-content .html-editor .editor-toolbar .mce-i-html:focus, 
+        #compose-content .html-editor .editor-toolbar .mce-i-html:hover {
+            border-color: var(--new-blue);
+            background-color: var(--new-blue);
+            color: var(--new-white);
+        }
+        #compose-content .recipient-input .recipient,
+        #compose-options .custom-select {
+            border: 1px solid var(--new-black-dark);
+            background-color: var(--new-black-dark);
+            color: var(--new-white);
+        }
+        #compose-content .btn-primary {
+            background: var(--new-blue);
+            border-color: var(--new-blue);
+        }
+        .ui-widget-content {
+            background-color: var(--new-black-dark);
+        }
+        .ui-widget-header {
+            background-color: var(--new-black-dark);
+        }
+        .ui-widget {
+            border: 1px solid var(--new-grey);
+        }
+        .ui-dialog .ui-dialog-titlebar {
+            border-bottom: 1px solid var(--new-grey);
+        }
+        .ui-dialog .ui-dialog-title,
+        .ui-dialog .ui-dialog-titlebar-close,
+        .searchbar form::before, 
+        .searchbar input,
+        .menu.pagenav a, 
+        .ui-dialog .ui-dialog-content {
+            color: var(--new-white);
+        }
+        .searchbar {
+            background-color: var(--new-black-dark);
+            color: var(--new-white);
+        }
+        .listing tbody td {
+            border-bottom: 1px solid var(--new-grey);
+            color: var(--new-white);
+        }
+        .popup .listbox .footer {
+            border-top: 1px solid var(--new-grey);
+            background-color: var(--new-black);
         }
     }
 
