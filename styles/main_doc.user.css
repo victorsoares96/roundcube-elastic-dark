@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     1.1.1
+@version     1.1.2
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -259,6 +259,33 @@
         .popup .listbox .footer {
             border-top: 1px solid var(--new-grey);
             background-color: var(--new-black);
+        }
+
+        /* Settings */
+        .listing li.selected,
+        ul.treelist li.selected > div > a, 
+        ul.treelist li.selected > a {
+            color: var(--new-white);
+            background-color: var(--new-blue);
+        }
+        ul.treelist li div.treetoggle.expanded::before {
+            color: var(--new-white);
+        }
+        ul.listing li ul {
+            border-top: 1px solid var(--new-grey);
+        }
+        .menu.pagenav.pagenav-list {
+            background-color: var(--new-grey);
+            border-bottom: 1px solid var(--new-grey);
+        }
+        .menu.pagenav.pagenav-list.expanded + .navlist {
+            border-bottom: 1px solid var(--new-grey);
+        }
+        #layout-content {
+            background-color: var(--new-black);
+        }
+        .table {
+            color: var(--new-white) !important;
         }
     }
 
