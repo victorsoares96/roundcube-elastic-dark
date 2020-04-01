@@ -16,7 +16,7 @@ Ciemny motyw dla skórki Elastic.
   * [Elastic Dark RAW Minify](https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main.user.css)
   * [Elastic Dark RAW Beautify](https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css)
 * W otwartym oknie z zainstalowanym stylem wpisz nazwę swojego serwera pocztowego
- * Edytuj ten wpis: `your_mail_server.com/roundcube`
+  * Edytuj ten wpis: `your_mail_server.com`
 * **Zapisz** styl
 
 ### Instalacja opcjonalna

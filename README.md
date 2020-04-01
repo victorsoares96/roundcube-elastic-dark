@@ -16,7 +16,7 @@ Dark theme for the Elastic skin.
   * [Elastic Dark RAW Minify](https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main.user.css)
   * [Elastic Dark RAW Beautify](https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css)
 * In the open window with the style installed, enter the name of your mail server
-  * Edit this entry: `your_mail_server.com/roundcube`
+  * Edit this entry: `your_mail_server.com`
 * **Save** style
 
 ### Optional installation
