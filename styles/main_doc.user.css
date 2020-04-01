@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     1.1.4
+@version     1.1.5
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -123,6 +123,10 @@
         .bs-popover-auto[x-placement^="left"]>.arrow::after,
         .bs-popover-left>.arrow::after {
             border-left-color: var(--new-black-dark);
+        }
+        .bs-popover-auto[x-placement^="right"] > .arrow::after,
+        .bs-popover-right > .arrow::after {
+            border-right-color: var(--new-black-dark);
         }
         .header a.button.icon:not(.disabled):focus,
         .header a.button.icon:not(.disabled):hover,
