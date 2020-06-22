@@ -2,7 +2,7 @@
 
 Dark theme for the Elastic skin.
 
-<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail.png"><img src="assets/mail.png" width="600" alt=""></a>
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-1.png"><img src="assets/mail-1.png" width="600" alt=""></a>
 
 ## Installation
 
@@ -37,7 +37,8 @@ Dark theme for the Elastic skin.
 
 ## Pictures
 
-<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-message.png"><img src="assets/mail-message.png" width="600" alt=""></a>
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-2.png"><img src="assets/mail-2.png" width="600" alt=""></a>
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-3.png"><img src="assets/mail-3.png" width="600" alt=""></a>
 
 ## Links
 
