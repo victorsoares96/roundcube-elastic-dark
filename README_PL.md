@@ -2,7 +2,9 @@
 
 Ciemny motyw dla skórki Elastic.
 
-<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail.png"><img src="assets/mail.png" width="600" alt=""></a>
+Wykonany w wersji oprogramowania Roundcube Webmail 1.4.5.
+
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-1.png"><img src="assets/mail-1.png" width="600" alt=""></a>
 
 ## Instalacja
 
@@ -30,14 +32,11 @@ Ciemny motyw dla skórki Elastic.
 * Wklej do otwartego okna przeglądarki
 * **Zapisz** nowy styl
 
-## Informacje
-
-* Wykonany w wersji oprogramowania Roundcube Webmail 1.4.2
-* Wsparcie od rozdzielczości 770 pikseli
-
 ## Zdjęcia
 
-<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-message.png"><img src="assets/mail-message.png" width="600" alt=""></a>
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-2.png"><img src="assets/mail-2.png" width="600" alt=""></a>
+
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-3.png"><img src="assets/mail-3.png" width="480" alt=""></a>
 
 ## Linki
 
