@@ -2,313 +2,605 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     1.1.6
+@version     2.0.0
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
 @license     MIT
 ==/UserStyle== */
 
-@-moz-document domain("your_mail_server.com") {
+@-moz-document url-prefix("your_mail_server.com") {
 
     :root {
-        --new-blue: #007bff;
-        --new-white: #eeeeee;
-        --new-black-dark: #212121;
-        --new-black: #262626;
-        --new-grey: #383838;
+        --new-blue-1: #0063cc;
+        --new-blue-2: #007bff;
+        --new-blue-3: #37beff;
+        --new-blue-4: #85d6ff;
+        --new-blue-5: rgba(0,123,255,0.25);
+        --new-white-1: #e9e9e9;
+        --new-white-2: #9e9e9e;
+        --new-black-1: #101010; /* SIDE PANEL */
+        --new-black-2: #191919; /* TOP PANEL, BOTTOM PANEL MOBILE */
+        --new-black-3: #1f1f1f; /* ALL BODY, BOTTOM PANEL DESKTOP */
+        --new-black-4: #303030; /* BORDER */
+        --new-black-5: rgba(16,16,16,0.8);
+        --new-red-1: #d92027;
+        --new-orange-1: #bb3b0e;
+        --new-green-1: #007944;
     }
-
-    /* Global styles */
+    
+    /* GLOBAL STYLES */
+    
     body {
-        background-color: var(--new-black);
-        color: var(--new-white);
+        color: var(--new-white-1);
+        background-color: var(--new-black-3);
     }
     body::before {
         background: transparent;
     }
-    #message-content {
-        background-color: var(--new-white);
-        color: var(--new-black);
-        padding: 15px;
+    a {
+        color: var(--new-blue-3);
     }
+    a:hover {
+        color: var(--new-blue-4);
+    }
+    
+    /* LOGIN */
+    
+    .task-login #layout-content {
+        background: var(--new-black-1);
+    }
+    .task-login #messagestack .loading {
+        background-color: var(--new-black-3);
+    }
+    .task-login #messagestack div {
+        background-color: var(--new-black-3);
+    }
+    .task-login #messagestack .alert-warning {
+        background-color: var(--new-orange-1);
+        color: var(--new-white-1);
+    }
+    .form-control:focus {
+        border-color: var(--new-blue-1);
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .btn-primary {
+        background: var(--new-blue-1);
+        border-color: var(--new-blue-1);
+    }
+    .btn-primary:hover {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+        color: var(--new-white-1) !important; /* MEDIAQUERY 769px */
+    }
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+    }
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+    }
+    #login-footer {
+        color: var(--new-white-2);
+    }
+    
+    /* TOP PANEL */
+    
+    #layout > div > .header {
+        background-color: var(--new-black-2);
+        color: var(--new-white-1);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    #layout > div > .header a.button {
+        color: var(--new-white-1);
+    }
+    html.layout-small .popover-header,
+    html.layout-phone .popover-header {
+        background-color: var(--new-black-1);
+    }
+    .popover {
+        background-color: var(--new-black-2);
+        box-shadow: none; /* SEARCH */
+        border-color: var(--new-black-4); /* SEARCH */
+    }
+    #taskmenu a {
+        border-bottom: 1px solid var(--new-black-4) !important;
+        color: var(--new-white-1);
+    }
+    .menu a:not(.disabled):focus,
+    .menu a:not(.disabled):hover {
+        background-color: var(--new-blue-1);
+    }
+    #layout-sidebar {
+        background-color: var(--new-black-3);
+    }
+    .listing li,
+    .listing tbody td {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    ul.listing li ul {
+        border-top: 1px solid var(--new-black-4);
+    }
+    .listing li a,
+    .listing tbody td {
+        color: var(--new-white-1);
+    }
+    ul.treelist li.selected > a,
+    ul.treelist li.selected > div > a {
+        color: var(--new-white-1);
+        background-color: var(--new-blue-1);
+    }
+    .folderlist li.mailbox .unreadcount {
+        background: var(--new-white-1);
+        color: var(--new-blue-1);
+    }
+    .menu.listing a {
+        color: var(--new-white-1);
+    }
+    html.layout-small .popover:not(.select-menu) .listing li:last-child,
+    html.layout-phone .popover:not(.select-menu) .listing li:last-child {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    a.disabled:not(.btn) {
+        opacity: 0.6;
+    }
+    .popupmenu .listing li > a:not(.disabled):hover {
+        color: var(--new-white-1);
+        background-color: var(--new-blue-1);
+    }
+    .popover .menu .dropbutton a.dropdown {
+        background-color: var(--new-black-3);
+    }
+    .popover .menu li a[aria-haspopup]::after,
+    .popover .menu li a[aria-haspopup].dropdown::after {
+        color: var(--new-white-1);
+    }
+    .popover .menu li a:not(.disabled):hover {
+        background-color: var(--new-blue-1);
+        color: var(--new-white-1);
+    }
+    .popover .menu .dropbutton a.dropdown:hover {
+        background-color: var(--new-blue-1);
+    }
+    .popover .menu .dropbutton:not(.disabled):hover {
+        background-color: var(--new-blue-1);
+    }
+    .ui-dialog .ui-dialog-titlebar {
+        background-color: var(--new-black-2);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .ui-dialog .ui-dialog-title {
+        color: var(--new-white-1);
+    }
+    .ui-dialog .ui-dialog-buttonpane {
+        background-color: var(--new-black-2);
+        border-top: 1px solid var(--new-black-4);
+    }
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-primary,
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-secondary {
+        color: var(--new-white-1);
+    }
+    .ui-widget-content {
+        background-color: var(--new-black-3);
+    }
+    .custom-file-input:focus ~ .custom-file-label {
+        border-color:var(--new-blue-1);
+        box-shadow:0 0 0 .2rem var(--new-blue-5);
+    }
+    .formcontent .hint {
+        color: var(--new-white-2);
+    }
+    .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: var(--new-blue-1);
+        background-color: var(--new-blue-1);
+    }
+    .custom-switch .custom-control-label::after {
+        background-color: var(--new-white-2);
+    }
+    .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
+        box-shadow:0 0 0 .2rem var(--new-blue-5);
+    }
+    
+    /* SEARCH */
+    
+    .searchbar {
+        background-color: var(--new-black-3);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .searchbar form::before {
+        color: var(--new-white-1);
+    }
+    .searchbar input {
+        color: var(--new-white-1);
+    }
+    .searchbar a {
+        color: var(--new-white-1);
+    }
+    #layout-list {
+        background-color: var(--new-black-3);
+    }
+    .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::before {
+        border-color: var(--new-blue-5);
+        background-color: var(--new-blue-5);
+    }
+    .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::after {
+        background-color: var(--new-white-2);
+    }
+    .custom-control-input:disabled ~ .custom-control-label {
+        color: var(--new-white-2);
+    }
+    
+    /* LIST MESSAGES */
+    
+    .listing tbody td a,
+    .messagelist td.subject span.date,
+    .messagelist td.subject span.fromto {
+        color: var(--new-white-1);
+    }
+    .listing li.selected,
+    .listing tr.selected td {
+        background-color: var(--new-blue-1);
+        color: var(--new-white-1);
+    }
+    .floating-action-buttons a.button {
+        background: var(--new-blue-1);
+        color: var(--new-white-1);
+        box-shadow: none;
+    }
+    .listing-info {
+        color: var(--new-white-2);
+    }
+    .messagelist tr.flagged td,
+    .messagelist tr.flagged td.subject span.date,
+    .messagelist tr.flagged td.subject span.fromto,
+    .messagelist tr.flagged td.subject span.subject a {
+        color: var(--new-white-1);
+    }
+    html.layout-phone .messagelist td.flags .flag,
+    html.touch .messagelist td.flags .flag {
+        visibility: visible;
+    }
+    .messagelist tr.flagged td.flags .flag {
+        color: var(--new-red-1);
+    }
+    .messagelist span.attachment span {
+        color: var(--new-white-1);
+    }
+    
+    /* CREATE MESSAGES */
+    
     #layout-content {
-        background-color: var(--new-black);
+        background-color: var(--new-black-3);
     }
-    .form-control-plaintext,
-    .propform.groupped.readonly label,
+    .input-group a:focus {
+        background-color: var(--new-blue-1);
+        color: var(--new-white-1) !important;
+    }
+    .recipient-input.focus {
+        border-color: var(--new-blue-1);
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .input-group .add.input-group-text:hover,
+    .input-group .edit.input-group-text:hover,
+    .input-group .delete.input-group-text:hover {
+        color: var(--new-blue-1);
+    }
+    .popover .menu li.separator {
+        background-color: var(--new-black-3);
+        color: var(--new-white-1);
+        padding: .6rem .5rem;
+    }
+    .popup .listbox .footer {
+        border-top: 1px solid var(--new-black-4);
+        background-color: var(--new-black-3);
+    }
+    .menu.pagenav a {
+        color: var(--new-white-1);
+    }
+    .file-upload .hint {
+        color: var(--new-white-2);
+    }
+    .btn-secondary {
+        background: var(--new-blue-1);
+        border-color: var(--new-blue-1);
+        color: var(--new-white-1) !important;
+    }
+    .btn-secondary:hover {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+    }
+    .attachmentslist li .attachment-name,
+    .attachmentslist li .attachment-size {
+        color: var(--new-white-1);
+    }
+    
+    /* MESSAGES */
+    
+    .message-partheaders {
+        color: var(--new-white-1);
+    }
+    #message-htmlpart1 div.rcmBody {
+        color: var(--new-white-1);
+    }
+    .attachmentslist {
+        background-color: var(--new-blue-1);
+        border: 8px solid var(--new-blue-1);
+    }
+    .ui.alert.boxwarning {
+        background-color: var(--new-black-4);
+    }
+    .ui.alert {
+        color: var(--new-white-1);
+    }
+    .ui.alert.boxinformation {
+        background-color: var(--new-black-4);
+    }
+    .ui.alert > i.icon {
+        color: var(--new-white-1);
+    }
+    p.image-attachment {
+        border: 1px solid var(--new-black-4);
+        background-color: var(--new-black-4);
+    }
+    p.image-attachment span {
+        color: var(--new-white-1);
+    }
+    
+    /* BOTTOM PANEL */
+    
+    #layout > div > .footer {
+        background-color: var(--new-black-2);
+        border-top: 1px solid var(--new-black-4);
+    }
+    .menu.pagenav .pagenav-text {
+        color: var(--new-white-1);
+    }
+    .quota-widget {
+        color: var(--new-white-1);
+    }
+    .quota-widget .count {
+        color: var(--new-white-1);
+    }
+    .menu.toolbar a {
+        color: var(--new-white-1);
+    }
+    .quota-widget .value {
+        background-color: var(--new-blue-1);
+    }
+    
+    /* BOOK ADDRESS */
+    
+    .readonly .input-group-text,
+    .readonly .form-control-plaintext {
+        color: var(--new-white-1);
+    }
+    .ui-datepicker .ui-datepicker-header {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .ui-widget-header {
+        background-color: var(--new-black-2);
+    }
+    .ui-widget {
+        border: 1px solid var(--new-black-4);
+    }
+    .ui-datepicker .ui-state-default,
+    .ui-datepicker.ui-widget-content .ui-state-default {
+        color: var(--new-white-1);
+    }
+    .ui-datepicker .ui-state-highlight,
+    .ui-datepicker .ui-datepicker-days-cell-over a,
+    .ui-datepicker.ui-widget-content .ui-state-highlight,
+    .ui-datepicker .ui-datepicker-days-cell-over a.ui-state-default {
+        background: var(--new-blue-1);
+        color: var(--new-white-1);
+    }
+    .ui-datepicker a.ui-state-active {
+        background: var(--new-blue-2) !important;
+    }
+    
+    /* SETTINGS */
+    
+    .form-control-plaintext {
+        color: var(--new-white-1);
+    }
+    .menu.pagenav.pagenav-list {
+        background-color: var(--new-black-2);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .listing li.disabled,
+    .listing tr.disabled td {
+        color: var(--new-white-1);
+    }
+    .menu.pagenav.pagenav-list.expanded + .navlist {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .menu.pagenav.pagenav-list + .navlist {
+        background-color: var(--new-black-2);
+    }
     .btn {
-        color: var(--new-white);
+        color: var(--new-white-1);
     }
-    #rules .btn:hover,
-    #actions .btn:hover {
-        color: var(--new-blue);
+    .btn:hover {
+        color: var(--new-blue-4);
     }
-
-    @media(min-width: 770px) {
-
-        /* Login page */
-        .task-login #layout-content {
-            background: var(--new-black-dark);
-        }
-
-        /* Global styles */
-        .listing li {
-            border-bottom: 1px solid var(--new-grey);
-        }
-        .listing li a {
-            color: var(--new-white);
-        }
-        .menu a:not(.disabled):focus,
-        .menu a:not(.disabled):hover {
-            background-color: var(--new-blue);
-        }
-        html:not(.touch) .listing li>a:focus,
-        html:not(.touch) .listing.focus tbody tr.focused>td:first-child,
-        html:not(.touch) .listing.focus:not(.withselection) tbody tr.focused>td.selection+td {
-            border-left: 2px solid var(--new-white);
-        }
-
-        /* Side panel */
-        #layout-menu,
-        #layout-menu #taskmenu .special-buttons {
-            background-color: var(--new-black-dark);
+    .btn-danger:focus {
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .multi-input > .content.focused {
+        border-color: var(--new-blue-1);
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .input-group .reset.input-group-text:hover {
+        color: var(--new-blue-1);
+    }
+    a.ui-button:active,
+    .ui-state-active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover,
+    .ui-widget-header .ui-state-active,
+    .ui-widget-content .ui-state-active {
+        background: var(--new-blue-1) !important;
+    }
+    
+    /* ABOUT PROGRAM */
+    
+    .table {
+        color: var(--new-white-1);
+    }
+    
+    /* LOADER AND MESSAGES (ALERT) */
+    
+    #messagestack .alert-warning {
+        background-color: var(--new-orange-1);
+        color: var(--new-white-1);
+    }
+    #messagestack .alert-warning > i.icon:before {
+        color: var(--new-white-1);
+    }
+    #messagestack .loading {
+        background-color: var(--new-black-1);
+    }
+    #messagestack .alert-success {
+        background-color: var(--new-green-1);
+    }
+    .iframe-loader {
+        background-color: var(--new-black-2);
+    }
+    .iframe-loader .spinner-border {
+        color: var(--new-blue-1);
+        border-color: currentColor var(--new-white-1) currentColor currentColor;
+    }
+    #messagestack div {
+        background-color: var(--new-black-1);
+    }
+    #messagestack .alert-danger {
+        background-color: var(--new-orange-1);
+    }
+    .ui-widget-overlay {
+        background-color: var(--new-black-5);
+    }
+    
+    /* MEDIAQUERY 769px */
+    
+    .bs-popover-auto[x-placement^="right"] > .arrow::after,
+    .bs-popover-right > .arrow::after {
+        border-right-color: var(--new-white-1);
+    }
+    html:not(.touch) .listing li > a:focus,
+    html:not(.touch) .listing.focus tbody tr.focused > td:first-child,
+    html:not(.touch) .listing.focus:not(.withselection) tbody tr.focused > td.selection + td {
+        border-left: 2px solid var(--new-blue-1);
+    }
+    
+    @media(min-width: 481px) {
+        
+        /* SIDE PANEL */
+        
+        #layout-menu {
+            background-color: var(--new-black-1);
         }
         #layout-menu .popover-header {
-            background-color: var(--new-black-dark) !important;
+            background-color: var(--new-black-1) !important;
         }
-        #layout-menu .menu {
-            margin: 5px 0 0;
+        #taskmenu .action-buttons a {
+            color: var(--new-white-1);
         }
-        #layout-menu #taskmenu .action-buttons a {
-            color: var(--new-white);
+        #taskmenu a.selected {
+            background: var(--new-blue-1);
         }
-        #layout-menu #taskmenu .action-buttons a:hover,
-        #layout-menu #taskmenu a:hover,
-        #layout-menu #taskmenu a.logout:hover,
-        #layout-menu #taskmenu a.selected {
-            background: var(--new-blue);
+        #taskmenu a.selected:hover {
+            background: var(--new-blue-2);
         }
-        #layout-menu #taskmenu a.logout {
-            background: #dc3545;
-            color: var(--new-white) !important;
+        #taskmenu a:hover {
+            background: var(--new-blue-2);
         }
-
-        /* Top panel */
-        #layout>div>.header {
-            background-color: var(--new-black-dark);
-            color: var(--new-white);
-            border-bottom: 1px solid var(--new-grey);
+        #taskmenu .action-buttons a:hover {
+            color: var(--new-white-1);
+            background: var(--new-blue-2);
         }
-        #layout>div>.header a.button,
-        .menu.toolbar a {
-            color: var(--new-white);
+        #taskmenu .special-buttons {
+            background-color: var(--new-black-1);
         }
-        .popover {
-            box-shadow: none;
-            border: none;
-            background-color: var(--new-black-dark);
-            color: var(--new-white);
+        #taskmenu a.logout:hover {
+            color: var(--new-white-1) !important;
+            background: var(--new-red-1);
         }
-        .menu.toolbar li {
-            border-bottom: 0;
+        #taskmenu.menu.toolbar a {
+            border: 0 !important;
         }
-        .menu.toolbar .dropbutton a.dropdown {
-            margin: 0 0 0 0.2rem
+        
+        /* BOTTOM PANEL */
+        
+        #layout > div > .footer {
+            background-color: var(--new-black-3);
         }
-        .bs-popover-auto[x-placement^="bottom"]>.arrow::after,
-        .bs-popover-bottom>.arrow::after {
-            border-bottom-color: var(--new-black-dark);
+        .popover-body {
+            color: var(--new-white-1);
         }
-        .bs-popover-auto[x-placement^="left"]>.arrow::after,
-        .bs-popover-left>.arrow::after {
-            border-left-color: var(--new-black-dark);
+        .popupmenu .listing li.selected {
+            background-color: var(--new-blue-1);
+        }
+    }
+    
+    @media(min-width: 769px) {
+        
+        /* TOP PANEL, SEARCH, LIST MESSAGES, BOTTOM PANEL */
+        
+        #layout-list {
+            border-right: 1px solid var(--new-black-4);
+        }
+        #layout-sidebar {
+            border-right: 1px solid var(--new-black-4);
+        }
+        
+        /* TOP PANEL */
+        
+        .header a.button.icon:not(.disabled):focus,
+        .header a.button.icon:not(.disabled):hover {
+            background-color: var(--new-blue-1);
+        }
+        .menu.toolbar .dropbutton a.dropdown:hover {
+            background-color: var(--new-blue-2);
+        }
+        .menu.toolbar .dropbutton:not(.disabled):hover {
+            background-color: var(--new-blue-1);
+        }
+        .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
+        .bs-popover-bottom > .arrow::after {
+            border-bottom-color: var(--new-white-2);
+        }
+        .bs-popover-auto[x-placement^="left"] > .arrow::after,
+        .bs-popover-left > .arrow::after {
+            border-left-color: var(--new-black-4);
         }
         .bs-popover-auto[x-placement^="right"] > .arrow::after,
         .bs-popover-right > .arrow::after {
-            border-right-color: var(--new-black-dark);
+            border-right-color: var(--new-black-4);
         }
-        .header a.button.icon:not(.disabled):focus,
-        .header a.button.icon:not(.disabled):hover,
-        .menu.toolbar .dropbutton:not(.disabled):hover,
-        .menu.toolbar .dropbutton a.dropdown:hover,
-        .popupmenu .listing li>a:not(.disabled):hover {
-            background-color: var(--new-blue);
-        }
+        
+        /* CREATE MESSAGES */
 
-        /* Column "Folder" */
-        #layout-sidebar {
-            background-color: var(--new-black);
-            border-right: 1px solid var(--new-grey);
-        }
-        #layout-sidebar ul.treelist li.selected>div>a,
-        #layout-sidebar ul.treelist li.selected>a {
-            color: var(--new-white);
-            background-color: var(--new-blue);
-        }
-        #layout-sidebar ul.listing li ul {
-            border-top: 1px solid var(--new-grey);
-        }
-        #layout-sidebar ul.treelist li div.treetoggle::before {
-            color: var(--new-white);
-        }
-
-        /* Column "Message list" */
-        #layout-list {
-            background-color: var(--new-black);
-            border-right: 1px solid var(--new-grey);
-        }
-        #layout-list .searchbar {
-            background-color: var(--new-black);
-            border-bottom: 1px solid var(--new-grey);
-        }
-        #layout-list .searchbar form::before,
-        #layout-list .searchbar input,
-        #layout-list .searchbar a,
-        #layout-list .listing tbody td,
-        #layout-list .messagelist td.subject span.fromto,
-        #layout-list .messagelist td.subject span.date,
-        #layout-list .messagelist td.subject a,
-        #layout-list .messagelist td.subject span,
-        #layout-list .messagelist td.subject span.msgicon.status::before,
-        #layout-list .custom-switch .custom-control-label,
-        #layout-list .listing-info,
-        #layout-list .messagelist tr.thread td.threads div::before {
-            color: var(--new-white);
-        }
-        #layout-list .listing tr.selected td {
-            background-color: var(--new-blue);
-        }
-        #layout-list .listing tbody td {
-            border-bottom: 1px solid var(--new-grey);
-            padding: 0.5rem 0.4rem;
-        }
-        #layout-list .messagelist tr.flagged td {
-            color: #ff5552;
-        }
-
-        /* Bottom panel */
-        #layout>div>.footer {
-            border-top: 1px solid var(--new-grey);
-            background-color: var(--new-black-dark);
-        }
-        #layout-sidebar .quota-widget,
-        #layout-sidebar .quota-widget .count,
-        #layout-list .menu.pagenav a,
-        #layout-list .menu.pagenav .pagenav-text {
-            color: var(--new-white);
-        }
-        #layout-sidebar .quota-widget .bar {
-            border: 1px solid var(--new-white);
-        }
-
-        /* New message, only HTML */
         #layout-sidebar.sidebar-right {
-            border-left: 1px solid var(--new-grey);
-        }
-        #compose-content {
-            background: var(--new-black);
-        }
-        #compose-content .custom-select,
-        #compose-content .form-control {
-            background: var(--new-grey);
-            border: 1px solid var(--new-gray);
-            color: var(--new-white);
-        }
-        #compose-content .input-group-text {
-            color: var(--new-white);
-            background-color: var(--new-black-dark);
-            border: 1px solid var(--new-grey);
-        }
-        #compose-content .form-control:focus,
-        #compose-options .form-control:focus {
-            background-color: var(--new-grey);
-            color: var(--new-white);
-        }
-        #compose-content .html-editor .editor-toolbar {
-            border-bottom: 1px solid var(--new-black-dark);
-            background-color: var(--new-black-dark);
-        }
-        #compose-content .formcontent label,
-        #compose-content .recipient-input input,
-        #compose-options .row label.col-form-label {
-            color: var(--new-white);
-        }
-        #compose-content .html-editor .editor-toolbar .mce-i-html:focus, 
-        #compose-content .html-editor .editor-toolbar .mce-i-html:hover {
-            border-color: var(--new-blue);
-            background-color: var(--new-blue);
-            color: var(--new-white);
-        }
-        #compose-content .recipient-input .recipient,
-        #compose-options .custom-select {
-            border: 1px solid var(--new-black-dark);
-            background-color: var(--new-black-dark);
-            color: var(--new-white);
-        }
-        #compose-content .btn-primary {
-            background: var(--new-blue);
-            border-color: var(--new-blue);
-        }
-        .ui-widget-content {
-            background-color: var(--new-black-dark);
-        }
-        .ui-widget-header {
-            background-color: var(--new-black-dark);
-        }
-        .ui-widget {
-            border: 1px solid var(--new-grey);
-        }
-        .ui-dialog .ui-dialog-titlebar {
-            border-bottom: 1px solid var(--new-grey);
-        }
-        .ui-dialog .ui-dialog-title,
-        .ui-dialog .ui-dialog-titlebar-close,
-        .searchbar form::before, 
-        .searchbar input,
-        .menu.pagenav a, 
-        .ui-dialog .ui-dialog-content {
-            color: var(--new-white);
-        }
-        .searchbar {
-            background-color: var(--new-black-dark);
-            color: var(--new-white);
-        }
-        .listing tbody td {
-            border-bottom: 1px solid var(--new-grey);
-            color: var(--new-white);
-        }
-        .popup .listbox .footer {
-            border-top: 1px solid var(--new-grey);
-            background-color: var(--new-black);
-        }
-
-        /* Settings */
-        .listing li.selected,
-        ul.treelist li.selected > div > a, 
-        ul.treelist li.selected > a {
-            color: var(--new-white);
-            background-color: var(--new-blue);
-        }
-        ul.treelist li div.treetoggle.expanded::before {
-            color: var(--new-white);
-        }
-        ul.listing li ul {
-            border-top: 1px solid var(--new-grey);
-        }
-        .menu.pagenav.pagenav-list {
-            background-color: var(--new-grey);
-            border-bottom: 1px solid var(--new-grey);
-        }
-        .menu.pagenav.pagenav-list.expanded + .navlist {
-            border-bottom: 1px solid var(--new-grey);
-        }
-        .table {
-            color: var(--new-white) !important;
+            border-left: 1px solid var(--new-black-4);
         }
     }
+    
+    @media(min-width: 1025px) {
+        
+        /* SIDE PANEL */
 
+        #taskmenu a:focus {
+            background-color: var(--new-blue-1);
+        }
+    }
+    
     @media(min-width: 1350px) {
+
+        /* MENU RIGHT */
+        
         #layout-menu #rcmbtn109 {
             position: fixed;
             right: 0;
@@ -316,5 +608,4 @@
             z-index: 99;
         }
     }
-
 }
