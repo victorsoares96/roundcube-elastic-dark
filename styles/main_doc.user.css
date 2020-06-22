@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.0
+@version     2.0.1
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -45,24 +45,155 @@
         color: var(--new-blue-4);
     }
     
-    /* LOGIN */
-    
-    .task-login #layout-content {
-        background: var(--new-black-1);
-    }
-    .task-login #messagestack .loading {
+    /* COMBINED STYLES */
+
+    #layout-list,
+    #layout-sidebar,
+    #layout-content,
+    .ui-widget-content,
+    .task-login #messagestack div,
+    .task-login #messagestack .loading,
+    .popover .menu .dropbutton a.dropdown {
         background-color: var(--new-black-3);
     }
-    .task-login #messagestack div {
-        background-color: var(--new-black-3);
-    }
+    #messagestack .alert-warning,
     .task-login #messagestack .alert-warning {
         background-color: var(--new-orange-1);
         color: var(--new-white-1);
     }
-    .form-control:focus {
+    .form-control:focus,
+    .recipient-input.focus,
+    .multi-input > .content.focused,
+    .custom-file-input:focus ~ .custom-file-label {
         border-color: var(--new-blue-1);
         box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    #login-footer,
+    .listing-info,
+    .formcontent .hint,
+    .file-upload .hint,
+    .custom-control-input:disabled ~ .custom-control-label {
+        color: var(--new-white-2);
+    }
+    .btn-secondary:hover,
+    .btn-primary.disabled,
+    .btn-primary:disabled,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+    }
+    .listing li,
+    .listing tbody td,
+    .ui-datepicker .ui-datepicker-header,
+    .menu.pagenav.pagenav-list.expanded + .navlist,
+    html.layout-small .popover:not(.select-menu) .listing li:last-child,
+    html.layout-phone .popover:not(.select-menu) .listing li:last-child {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .quota-widget .value,
+    .menu a:not(.disabled):focus,
+    .menu a:not(.disabled):hover,
+    .popover .menu .dropbutton a.dropdown:hover,
+    .popover .menu .dropbutton:not(.disabled):hover {
+        background-color: var(--new-blue-1);
+    }
+    .btn-danger:focus,
+    .btn-primary:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus,
+    .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .btn,
+    .table,
+    .quota-widget,
+    .quota-widget .count,
+    .message-partheaders,
+    .form-control-plaintext,
+    .readonly .input-group-text,
+    .readonly .form-control-plaintext,
+    .searchbar a,
+    .searchbar input,
+    .searchbar form::before,
+    .menu.listing a,
+    .menu.pagenav a,
+    .menu.toolbar a,
+    .menu.pagenav .pagenav-text,
+    .listing li a,
+    .listing tbody td,
+    .listing tbody td a,
+    .listing li.disabled,
+    .listing tr.disabled td,
+    .ui.alert,
+    .ui.alert > i.icon,
+    .ui-datepicker .ui-state-default,
+    .ui-datepicker.ui-widget-content .ui-state-default,
+    .attachmentslist li .attachment-name,
+    .attachmentslist li .attachment-size,
+    .popover .menu li a[aria-haspopup]::after,
+    .popover .menu li a[aria-haspopup].dropdown::after,
+    .messagelist tr.flagged td,
+    .messagelist td.subject span.date,
+    .messagelist span.attachment span,
+    .messagelist td.subject span.fromto,
+    .messagelist tr.flagged td.subject span.date,
+    .messagelist tr.flagged td.subject span.fromto,
+    .messagelist tr.flagged td.subject span.subject a,
+    .ui-dialog .ui-dialog-title,
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-primary,
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-secondary,
+    p.image-attachment span,
+    #message-htmlpart1 div.rcmBody,
+    #layout > div > .header a.button,
+    #messagestack .alert-warning > i.icon:before {
+        color: var(--new-white-1);
+    }
+    #messagestack div,
+    #messagestack .loading,
+    html.layout-small .popover-header,
+    html.layout-phone .popover-header {
+        background-color: var(--new-black-1);
+    }
+    #layout > div > .footer,
+    .ui-dialog .ui-dialog-buttonpane {
+        background-color: var(--new-black-2);
+        border-top: 1px solid var(--new-black-4);
+    }
+    .menu.pagenav.pagenav-list,
+    .ui-dialog .ui-dialog-titlebar {
+        background-color: var(--new-black-2);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .custom-switch .custom-control-label::after,
+    .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::after {
+        background-color: var(--new-white-2);
+    }
+    .listing li.selected,
+    .listing tr.selected td,
+    .popover .menu li a:not(.disabled):hover,
+    .popupmenu .listing li > a:not(.disabled):hover,
+    ul.treelist li.selected > a,
+    ul.treelist li.selected > div > a {
+        color: var(--new-white-1);
+        background-color: var(--new-blue-1);
+    }
+    .input-group .add.input-group-text:hover,
+    .input-group .edit.input-group-text:hover,
+    .input-group .reset.input-group-text:hover,
+    .input-group .delete.input-group-text:hover {
+        color: var(--new-blue-1);
+    }
+    .iframe-loader,
+    .ui-widget-header,
+    .menu.pagenav.pagenav-list + .navlist {
+        background-color: var(--new-black-2);
+    }
+    
+    /* LOGIN */
+
+    .task-login #layout-content {
+        background: var(--new-black-1);
     }
     .btn-primary {
         background: var(--new-blue-1);
@@ -73,33 +204,13 @@
         border-color: var(--new-blue-2);
         color: var(--new-white-1) !important; /* MEDIAQUERY 769px */
     }
-    .btn-primary:not(:disabled):not(.disabled):active,
-    .btn-primary:not(:disabled):not(.disabled).active {
-        background: var(--new-blue-2);
-        border-color: var(--new-blue-2);
-    }
-    .btn-primary.disabled,
-    .btn-primary:disabled {
-        background: var(--new-blue-2);
-        border-color: var(--new-blue-2);
-    }
-    #login-footer {
-        color: var(--new-white-2);
-    }
-    
+
     /* TOP PANEL */
     
     #layout > div > .header {
         background-color: var(--new-black-2);
         color: var(--new-white-1);
         border-bottom: 1px solid var(--new-black-4);
-    }
-    #layout > div > .header a.button {
-        color: var(--new-white-1);
-    }
-    html.layout-small .popover-header,
-    html.layout-phone .popover-header {
-        background-color: var(--new-black-1);
     }
     .popover {
         background-color: var(--new-black-2);
@@ -110,98 +221,19 @@
         border-bottom: 1px solid var(--new-black-4) !important;
         color: var(--new-white-1);
     }
-    .menu a:not(.disabled):focus,
-    .menu a:not(.disabled):hover {
-        background-color: var(--new-blue-1);
-    }
-    #layout-sidebar {
-        background-color: var(--new-black-3);
-    }
-    .listing li,
-    .listing tbody td {
-        border-bottom: 1px solid var(--new-black-4);
-    }
     ul.listing li ul {
         border-top: 1px solid var(--new-black-4);
-    }
-    .listing li a,
-    .listing tbody td {
-        color: var(--new-white-1);
-    }
-    ul.treelist li.selected > a,
-    ul.treelist li.selected > div > a {
-        color: var(--new-white-1);
-        background-color: var(--new-blue-1);
     }
     .folderlist li.mailbox .unreadcount {
         background: var(--new-white-1);
         color: var(--new-blue-1);
     }
-    .menu.listing a {
-        color: var(--new-white-1);
-    }
-    html.layout-small .popover:not(.select-menu) .listing li:last-child,
-    html.layout-phone .popover:not(.select-menu) .listing li:last-child {
-        border-bottom: 1px solid var(--new-black-4);
-    }
     a.disabled:not(.btn) {
         opacity: 0.6;
-    }
-    .popupmenu .listing li > a:not(.disabled):hover {
-        color: var(--new-white-1);
-        background-color: var(--new-blue-1);
-    }
-    .popover .menu .dropbutton a.dropdown {
-        background-color: var(--new-black-3);
-    }
-    .popover .menu li a[aria-haspopup]::after,
-    .popover .menu li a[aria-haspopup].dropdown::after {
-        color: var(--new-white-1);
-    }
-    .popover .menu li a:not(.disabled):hover {
-        background-color: var(--new-blue-1);
-        color: var(--new-white-1);
-    }
-    .popover .menu .dropbutton a.dropdown:hover {
-        background-color: var(--new-blue-1);
-    }
-    .popover .menu .dropbutton:not(.disabled):hover {
-        background-color: var(--new-blue-1);
-    }
-    .ui-dialog .ui-dialog-titlebar {
-        background-color: var(--new-black-2);
-        border-bottom: 1px solid var(--new-black-4);
-    }
-    .ui-dialog .ui-dialog-title {
-        color: var(--new-white-1);
-    }
-    .ui-dialog .ui-dialog-buttonpane {
-        background-color: var(--new-black-2);
-        border-top: 1px solid var(--new-black-4);
-    }
-    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-primary,
-    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-secondary {
-        color: var(--new-white-1);
-    }
-    .ui-widget-content {
-        background-color: var(--new-black-3);
-    }
-    .custom-file-input:focus ~ .custom-file-label {
-        border-color:var(--new-blue-1);
-        box-shadow:0 0 0 .2rem var(--new-blue-5);
-    }
-    .formcontent .hint {
-        color: var(--new-white-2);
     }
     .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
         border-color: var(--new-blue-1);
         background-color: var(--new-blue-1);
-    }
-    .custom-switch .custom-control-label::after {
-        background-color: var(--new-white-2);
-    }
-    .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
-        box-shadow:0 0 0 .2rem var(--new-blue-5);
     }
     
     /* SEARCH */
@@ -210,54 +242,17 @@
         background-color: var(--new-black-3);
         border-bottom: 1px solid var(--new-black-4);
     }
-    .searchbar form::before {
-        color: var(--new-white-1);
-    }
-    .searchbar input {
-        color: var(--new-white-1);
-    }
-    .searchbar a {
-        color: var(--new-white-1);
-    }
-    #layout-list {
-        background-color: var(--new-black-3);
-    }
     .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::before {
         border-color: var(--new-blue-5);
         background-color: var(--new-blue-5);
     }
-    .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::after {
-        background-color: var(--new-white-2);
-    }
-    .custom-control-input:disabled ~ .custom-control-label {
-        color: var(--new-white-2);
-    }
     
     /* LIST MESSAGES */
     
-    .listing tbody td a,
-    .messagelist td.subject span.date,
-    .messagelist td.subject span.fromto {
-        color: var(--new-white-1);
-    }
-    .listing li.selected,
-    .listing tr.selected td {
-        background-color: var(--new-blue-1);
-        color: var(--new-white-1);
-    }
     .floating-action-buttons a.button {
         background: var(--new-blue-1);
         color: var(--new-white-1);
         box-shadow: none;
-    }
-    .listing-info {
-        color: var(--new-white-2);
-    }
-    .messagelist tr.flagged td,
-    .messagelist tr.flagged td.subject span.date,
-    .messagelist tr.flagged td.subject span.fromto,
-    .messagelist tr.flagged td.subject span.subject a {
-        color: var(--new-white-1);
     }
     html.layout-phone .messagelist td.flags .flag,
     html.touch .messagelist td.flags .flag {
@@ -266,27 +261,12 @@
     .messagelist tr.flagged td.flags .flag {
         color: var(--new-red-1);
     }
-    .messagelist span.attachment span {
-        color: var(--new-white-1);
-    }
     
     /* CREATE MESSAGES */
     
-    #layout-content {
-        background-color: var(--new-black-3);
-    }
     .input-group a:focus {
         background-color: var(--new-blue-1);
         color: var(--new-white-1) !important;
-    }
-    .recipient-input.focus {
-        border-color: var(--new-blue-1);
-        box-shadow: 0 0 0 .2rem var(--new-blue-5);
-    }
-    .input-group .add.input-group-text:hover,
-    .input-group .edit.input-group-text:hover,
-    .input-group .delete.input-group-text:hover {
-        color: var(--new-blue-1);
     }
     .popover .menu li.separator {
         background-color: var(--new-black-3);
@@ -297,98 +277,31 @@
         border-top: 1px solid var(--new-black-4);
         background-color: var(--new-black-3);
     }
-    .menu.pagenav a {
-        color: var(--new-white-1);
-    }
-    .file-upload .hint {
-        color: var(--new-white-2);
-    }
     .btn-secondary {
         background: var(--new-blue-1);
         border-color: var(--new-blue-1);
         color: var(--new-white-1) !important;
     }
-    .btn-secondary:hover {
-        background: var(--new-blue-2);
-        border-color: var(--new-blue-2);
-    }
-    .attachmentslist li .attachment-name,
-    .attachmentslist li .attachment-size {
-        color: var(--new-white-1);
-    }
     
     /* MESSAGES */
     
-    .message-partheaders {
-        color: var(--new-white-1);
-    }
-    #message-htmlpart1 div.rcmBody {
-        color: var(--new-white-1);
-    }
     .attachmentslist {
         background-color: var(--new-blue-1);
         border: 8px solid var(--new-blue-1);
     }
-    .ui.alert.boxwarning {
-        background-color: var(--new-black-4);
-    }
-    .ui.alert {
-        color: var(--new-white-1);
-    }
+    .ui.alert.boxwarning,
     .ui.alert.boxinformation {
         background-color: var(--new-black-4);
-    }
-    .ui.alert > i.icon {
-        color: var(--new-white-1);
     }
     p.image-attachment {
         border: 1px solid var(--new-black-4);
         background-color: var(--new-black-4);
     }
-    p.image-attachment span {
-        color: var(--new-white-1);
-    }
-    
-    /* BOTTOM PANEL */
-    
-    #layout > div > .footer {
-        background-color: var(--new-black-2);
-        border-top: 1px solid var(--new-black-4);
-    }
-    .menu.pagenav .pagenav-text {
-        color: var(--new-white-1);
-    }
-    .quota-widget {
-        color: var(--new-white-1);
-    }
-    .quota-widget .count {
-        color: var(--new-white-1);
-    }
-    .menu.toolbar a {
-        color: var(--new-white-1);
-    }
-    .quota-widget .value {
-        background-color: var(--new-blue-1);
-    }
     
     /* BOOK ADDRESS */
     
-    .readonly .input-group-text,
-    .readonly .form-control-plaintext {
-        color: var(--new-white-1);
-    }
-    .ui-datepicker .ui-datepicker-header {
-        border-bottom: 1px solid var(--new-black-4);
-    }
-    .ui-widget-header {
-        background-color: var(--new-black-2);
-    }
     .ui-widget {
         border: 1px solid var(--new-black-4);
-    }
-    .ui-datepicker .ui-state-default,
-    .ui-datepicker.ui-widget-content .ui-state-default {
-        color: var(--new-white-1);
     }
     .ui-datepicker .ui-state-highlight,
     .ui-datepicker .ui-datepicker-days-cell-over a,
@@ -403,38 +316,8 @@
     
     /* SETTINGS */
     
-    .form-control-plaintext {
-        color: var(--new-white-1);
-    }
-    .menu.pagenav.pagenav-list {
-        background-color: var(--new-black-2);
-        border-bottom: 1px solid var(--new-black-4);
-    }
-    .listing li.disabled,
-    .listing tr.disabled td {
-        color: var(--new-white-1);
-    }
-    .menu.pagenav.pagenav-list.expanded + .navlist {
-        border-bottom: 1px solid var(--new-black-4);
-    }
-    .menu.pagenav.pagenav-list + .navlist {
-        background-color: var(--new-black-2);
-    }
-    .btn {
-        color: var(--new-white-1);
-    }
     .btn:hover {
         color: var(--new-blue-4);
-    }
-    .btn-danger:focus {
-        box-shadow: 0 0 0 .2rem var(--new-blue-5);
-    }
-    .multi-input > .content.focused {
-        border-color: var(--new-blue-1);
-        box-shadow: 0 0 0 .2rem var(--new-blue-5);
-    }
-    .input-group .reset.input-group-text:hover {
-        color: var(--new-blue-1);
     }
     a.ui-button:active,
     .ui-state-active,
@@ -445,36 +328,14 @@
         background: var(--new-blue-1) !important;
     }
     
-    /* ABOUT PROGRAM */
-    
-    .table {
-        color: var(--new-white-1);
-    }
-    
     /* LOADER AND MESSAGES (ALERT) */
     
-    #messagestack .alert-warning {
-        background-color: var(--new-orange-1);
-        color: var(--new-white-1);
-    }
-    #messagestack .alert-warning > i.icon:before {
-        color: var(--new-white-1);
-    }
-    #messagestack .loading {
-        background-color: var(--new-black-1);
-    }
     #messagestack .alert-success {
         background-color: var(--new-green-1);
-    }
-    .iframe-loader {
-        background-color: var(--new-black-2);
     }
     .iframe-loader .spinner-border {
         color: var(--new-blue-1);
         border-color: currentColor var(--new-white-1) currentColor currentColor;
-    }
-    #messagestack div {
-        background-color: var(--new-black-1);
     }
     #messagestack .alert-danger {
         background-color: var(--new-orange-1);
@@ -499,30 +360,27 @@
         
         /* SIDE PANEL */
         
-        #layout-menu {
+        #layout-menu,
+        #taskmenu .special-buttons {
             background-color: var(--new-black-1);
         }
         #layout-menu .popover-header {
             background-color: var(--new-black-1) !important;
         }
+        .popover-body,
         #taskmenu .action-buttons a {
             color: var(--new-white-1);
         }
         #taskmenu a.selected {
             background: var(--new-blue-1);
         }
+        #taskmenu a:hover,
         #taskmenu a.selected:hover {
-            background: var(--new-blue-2);
-        }
-        #taskmenu a:hover {
             background: var(--new-blue-2);
         }
         #taskmenu .action-buttons a:hover {
             color: var(--new-white-1);
             background: var(--new-blue-2);
-        }
-        #taskmenu .special-buttons {
-            background-color: var(--new-black-1);
         }
         #taskmenu a.logout:hover {
             color: var(--new-white-1) !important;
@@ -537,9 +395,6 @@
         #layout > div > .footer {
             background-color: var(--new-black-3);
         }
-        .popover-body {
-            color: var(--new-white-1);
-        }
         .popupmenu .listing li.selected {
             background-color: var(--new-blue-1);
         }
@@ -549,9 +404,7 @@
         
         /* TOP PANEL, SEARCH, LIST MESSAGES, BOTTOM PANEL */
         
-        #layout-list {
-            border-right: 1px solid var(--new-black-4);
-        }
+        #layout-list,
         #layout-sidebar {
             border-right: 1px solid var(--new-black-4);
         }
@@ -559,14 +412,12 @@
         /* TOP PANEL */
         
         .header a.button.icon:not(.disabled):focus,
-        .header a.button.icon:not(.disabled):hover {
+        .header a.button.icon:not(.disabled):hover,
+        .menu.toolbar .dropbutton:not(.disabled):hover {
             background-color: var(--new-blue-1);
         }
         .menu.toolbar .dropbutton a.dropdown:hover {
             background-color: var(--new-blue-2);
-        }
-        .menu.toolbar .dropbutton:not(.disabled):hover {
-            background-color: var(--new-blue-1);
         }
         .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
         .bs-popover-bottom > .arrow::after {
