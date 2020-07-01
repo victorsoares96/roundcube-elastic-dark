@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.1
+@version     2.0.2
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -342,6 +342,20 @@
     }
     .ui-widget-overlay {
         background-color: var(--new-black-5);
+    }
+    .ui.alert.boxerror {
+        background-color: var(--new-red-1);
+    }
+    .ui.alert.alert-danger > i.icon::before {
+        color: var(--new-red-1);
+        margin: 0;
+    }
+    .ui.alert.boxerror i.icon {
+        background: var(--new-white-1);
+        padding: 10px;
+    }
+    .ui.alert-danger span {
+        margin: 0 0 0 20px;
     }
     
     /* MEDIAQUERY 769px */
