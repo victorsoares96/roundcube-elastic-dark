@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.3
+@version     2.0.4
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -80,7 +80,9 @@
     .btn-primary.disabled,
     .btn-primary:disabled,
     .btn-primary:not(:disabled):not(.disabled):active,
-    .btn-primary:not(:disabled):not(.disabled).active {
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .btn-secondary:not(:disabled):not(.disabled).active {
         background: var(--new-blue-2);
         border-color: var(--new-blue-2);
     }
@@ -101,8 +103,11 @@
     }
     .btn-danger:focus,
     .btn-primary:focus,
+    .btn-secondary:focus,
     .btn-primary:not(:disabled):not(.disabled):active:focus,
     .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .btn-secondary:not(:disabled):not(.disabled):active:focus,
+    .btn-secondary:not(:disabled):not(.disabled).active:focus,
     .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
         box-shadow: 0 0 0 .2rem var(--new-blue-5);
     }
