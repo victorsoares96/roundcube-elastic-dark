@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.4
+@version     2.0.5
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -318,6 +318,22 @@
     }
     .ui-datepicker a.ui-state-active {
         background: var(--new-blue-2) !important;
+    }
+    .nav-tabs {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        color: var(--new-white-1);
+        background-color: var(--new-black-3);
+        border-color: var(--new-black-4) var(--new-black-4) var(--new-black-3);
+    }
+    .nav-tabs .nav-link:focus {
+        border-color: var(--new-black-4) var(--new-black-4) var(--new-black-3);
+    }
+    .nav-tabs .nav-link:hover {
+        border-color: var(--new-black-4) var(--new-black-4) var(--new-black-4);
+        background-color: var(--new-black-5);
     }
     
     /* SETTINGS */
