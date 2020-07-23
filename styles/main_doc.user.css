@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.5
+@version     2.0.6
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -302,6 +302,16 @@
     p.image-attachment {
         border: 1px solid var(--new-black-4);
         background-color: var(--new-black-4);
+    }
+    .message-partheaders {
+        border-top: 1px solid var(--new-black-4);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    #messagebody .rcmBody p[style] {
+        color: var(--new-white-2) !important;
+    }
+    .message-part span.sig {
+        color: var(--new-white-2);
     }
     
     /* BOOK ADDRESS */
