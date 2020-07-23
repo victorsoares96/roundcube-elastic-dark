@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.2
+@version     2.0.3
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -23,7 +23,8 @@
         --new-black-2: #191919; /* TOP PANEL, BOTTOM PANEL MOBILE */
         --new-black-3: #1f1f1f; /* ALL BODY, BOTTOM PANEL DESKTOP */
         --new-black-4: #303030; /* BORDER */
-        --new-black-5: rgba(16,16,16,0.8);
+        --new-black-5: #262626; /* INPUT */
+        --new-black-6: rgba(16,16,16,0.8);
         --new-red-1: #d92027;
         --new-orange-1: #bb3b0e;
         --new-green-1: #007944;
