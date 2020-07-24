@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.9
+@version     2.0.10
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -265,6 +265,17 @@
     .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::before {
         border-color: var(--new-blue-5);
         background-color: var(--new-blue-5);
+    }
+    .custom-control-label::before {
+        background-color: var(--new-black-4);
+        border: 1px solid var(--new-black-4);
+    }
+    .custom-switch .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: var(--new-blue-1);
+    }
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+        background-color: var(--new-blue-1);
+        border-color: var(--new-blue-1);
     }
     
     /* LIST MESSAGES */
