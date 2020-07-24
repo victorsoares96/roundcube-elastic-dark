@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.8
+@version     2.0.9
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -67,7 +67,7 @@
     .multi-input > .content.focused,
     .custom-file-input:focus ~ .custom-file-label {
         border-color: var(--new-blue-1);
-        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+        box-shadow: 0 0 .2rem .1rem var(--new-blue-5);
     }
     #login-footer,
     .listing-info,
@@ -101,6 +101,7 @@
     .popover .menu .dropbutton:not(.disabled):hover {
         background-color: var(--new-blue-1);
     }
+    .btn:focus,
     .btn-danger:focus,
     .btn-primary:focus,
     .btn-secondary:focus,
@@ -188,7 +189,7 @@
     .input-group .edit.input-group-text:hover,
     .input-group .reset.input-group-text:hover,
     .input-group .delete.input-group-text:hover {
-        color: var(--new-blue-1);
+        color: var(--new-blue-3);
     }
     .iframe-loader,
     .ui-widget-header,
@@ -210,8 +211,8 @@
         border-color: var(--new-blue-2);
         color: var(--new-white-1) !important; /* MEDIAQUERY 769px */
     }
-    .input-group-text,
-    .form-control {
+    .form-control,
+    .input-group-text {
         color: var(--new-white-1);
         background-color: var(--new-black-5);
         border: 1px solid var(--new-black-4);
@@ -219,6 +220,9 @@
     .form-control:focus {
         background-color: var(--new-black-3);
         color: var(--new-white-1);
+    }
+    .form-control::placeholder {
+        color: var(--new-white-2);
     }
 
     /* TOP PANEL */
@@ -357,6 +361,9 @@
     }
     .propform.groupped .row.input-group .content input {
         border-color: var(--new-black-4);
+    }
+    .input-group-text input:focus {
+        border-color: var(--new-blue-1) !important;
     }
     
     /* SETTINGS */
