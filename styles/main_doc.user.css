@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.10
+@version     2.0.11
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -312,6 +312,230 @@
         background: var(--new-blue-1);
         border-color: var(--new-blue-1);
         color: var(--new-white-1) !important;
+    }
+    .mce-ico,
+    .mce-reset,
+    .mce-widget,
+    .mce-widget *,
+    .mce-container,
+    .mce-container *,
+    .mce-btn button,
+    .mce-btn .mce-txt,
+    .mce-content-body,
+    .recipient-input input,
+    .mce-window .mce-label,
+    .mce-window .mce-textbox,
+    .mce-menu-item:hover .mce-ico,
+    .mce-menu-item:focus .mce-ico,
+    .mce-menu-item:hover .mce-text,
+    .mce-menu-item:focus .mce-text,
+    .mce-menu-item.mce-selected .mce-ico,
+    .mce-menu-item.mce-selected .mce-text,
+    .mce-window .mce-foot .mce-btn button,
+    .mce-window .mce-foot .mce-btn button:hover,
+    .mce-window .mce-window-head .mce-title,
+    .mce-window .mce-window-head .mce-close,
+    .html-editor .editor-toolbar .mce-i-html {
+        color: var(--new-white-1);
+    }
+    select:-moz-focusring {
+        color: var(--new-white-1) !important;
+        text-shadow: none !important;
+    }
+    .recipient-input .recipient {
+        border: 1px solid var(--new-black-4);
+        background-color: var(--new-black-4);
+    }
+    .html-editor .editor-toolbar {
+        border-bottom: 1px solid var(--new-black-4);
+        background-color: var(--new-black-3);
+    }
+    .mce-splitbtn.mce-opened,
+    .html-editor .editor-toolbar .mce-i-html:focus,
+    .html-editor .editor-toolbar .mce-i-html:hover {
+        border-color: var(--new-blue-1);
+        background-color: var(--new-blue-1);
+    }
+    .mce-foot .mce-btn,
+    .mce-window .mce-tabs,
+    .mce-tinymce .mce-panel,
+    .mce-window-body .mce-btn,
+    .mce-tinymce.mce-container.mce-panel {
+        border-color: var(--new-black-4);
+    }
+    .mce-tinymce.focused {
+        border-color: var(--new-blue-1) !important;
+        box-shadow: 0 0 0 .1rem var(--new-blue-5) !important;
+    }
+    .mce-tabs,
+    .mce-panel,
+    .mce-window .mce-reset,
+    .mce-floatpanel.mce-popover,
+    .mce-menu-item.mce-disabled,
+    .mce-tabs + .mce-container-body,
+    .mce-menu-item.mce-disabled:hover,
+    .mce-window .mce-combobox .mce-btn,
+    i.mce-i-checkbox {
+        background-color: var(--new-black-3);
+    }
+    .mce-tinymce .mce-btn,
+    .mce-tinymce .mce-panel,
+    .image-selector .attachmentslist li:hover,
+    .image-selector .attachmentslist li:focus,
+    .mce-menu-item.mce-active.mce-menu-item-normal {
+        background-color: var(--new-black-5);
+    }
+    .mce-btn-group:not(:first-child) {
+        border-left: 1px solid var(--new-black-4);
+    }
+    .mce-caret {
+        border-top: 4px solid var(--new-white-1);
+    }
+    i.mce-i-backcolor {
+        background: var(--new-black-4);
+    }
+    .mce-colorbutton .mce-preview {
+        background: var(--new-white-1);
+    }
+    .mce-btn:hover,
+    .mce-btn:active,
+    .mce-btn:focus {
+        background: var(--new-blue-1);
+        color: var(--new-white-1);
+        border-color: var(--new-black-5);
+    }
+    .mce-btn:hover .mce-caret {
+        border-top-color: var(--new-white-1);
+    }
+    .mce-splitbtn:hover .mce-open {
+        border-left: 1px solid var(--new-blue-1);
+    }
+    .mce-btn.mce-active {
+        background: var(--new-blue-1) !important;
+    }
+    .mce-menu,
+    .mce-floatpanel.mce-popover {
+        box-shadow: 3px 3px 5px var(--new-black-5) !important;
+        border-color: var(--new-black-4) !important;
+    }
+    .mce-floatpanel.mce-popover.mce-bottom > .mce-arrow::after {
+        border-bottom-color: var(--new-black-3);
+    }
+    .mce-charmap td,
+    .mce-combobox input,
+    .mce-grid td.mce-grid-cell div {
+        border: 1px solid var(--new-black-4);
+    }
+    .mce-charmap td:hover,
+    .mce-menu-item:hover,
+    .mce-menu-item:focus,
+    .mce-menu-item.mce-selected {
+        background: var(--new-blue-1);
+    }
+    .mce-menu-item .mce-caret {
+        border-left: 4px solid var(--new-white-1);
+    }
+    .mce-grid-border a {
+        border-color: var(--new-white-2);
+    }
+    .mce-grid-border a:hover,
+    .mce-grid-border a.mce-active {
+        border-color: var(--new-white-1);
+        background: var(--new-blue-2);
+    }
+    .mce-tabs,
+    .mce-window .mce-window-head {
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .mce-window .mce-textbox:focus {
+        color: var(--new-white-1);
+        border-color: var(--new-blue-1);
+        box-shadow: 0 0 0 .1rem var(--new-blue-5);
+    }
+    .image-selector button,
+    .mce-window .mce-foot .mce-btn,
+    .mce-window .mce-foot .mce-btn.mce-primary {
+        color: var(--new-white-1);
+        background: var(--new-blue-1);
+        border-color: var(--new-blue-1);
+    }
+    .image-selector button:hover,
+    .image-selector button:not(:disabled):not(.disabled):active,
+    .image-selector button:not(:disabled):not(.disabled).active,
+    .mce-window .mce-foot .mce-btn:hover,
+    .mce-window .mce-foot .mce-btn.mce-primary:hover,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active {
+        background: var(--new-blue-2);
+        border-color: var(--new-blue-2);
+    }
+    .image-selector button:focus,
+    .image-selector button:not(:disabled):not(.disabled):active:focus,
+    .image-selector button:not(:disabled):not(.disabled).active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:focus,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active:focus,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active:focus {
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .mce-window .mce-foot .mce-btn:focus {
+        color: var(--new-white-1);
+        background: var(--new-blue-2);
+        box-shadow: 0 0 0 .2rem var(--new-blue-5);
+    }
+    .mce-btn {
+        background: var(--new-black-5);
+        border: 1px solid var(--new-black-5);
+    }
+    .mce-window .mce-btn:hover,
+    .mce-window .mce-btn:active {
+        border-color: var(--new-blue-1);
+        background: var(--new-black-5);
+    }
+    .mce-window .mce-listbox:focus {
+        border-color: var(--new-blue-1) !important;
+        box-shadow: 0 0 0 .15rem var(--new-blue-5) !important;
+        background: var(--new-black-5);
+    }
+    .mce-window .mce-tabs .mce-tab.mce-active {
+        border: 1px solid var(--new-black-4);
+        border-bottom-color: var(--new-black-4);
+        color: var(--new-white-1) !important;
+    }
+    .mce-tab {
+        text-shadow: none;
+    }
+    .mce-window .mce-tabs .mce-tab {
+        color: var(--new-blue-3);
+    }
+    .mce-window .mce-tabs .mce-tab:not(.mce-active):hover {
+        border: 1px solid var(--new-black-4);
+        border-bottom: 0;
+    }
+    .mce-window .mce-checkbox i.mce-i-checkbox {
+        color: var(--new-blue-1);
+    }
+    .mce-colorbox i {
+        border: 1px solid var(--new-white-2);
+    }
+    .mce-window .mce-combobox .mce-btn:hover {
+        border: 1px solid var(--new-black-4);
+        border-left: 0;
+        background: var(--new-black-4);
+    }
+    .image-selector .attachmentslist li span.img {
+        border: 1px solid var(--new-black-4);
+        background: var(--new-black-3);
+    }
+    .mce-content-body blockquote {
+        border-left: 2px solid var(--new-blue-3);
+    }
+    .mce-content-body table[style],
+    .mce-content-body table[style] td {
+        border-color: var(--new-white-2);
     }
     
     /* MESSAGES */
