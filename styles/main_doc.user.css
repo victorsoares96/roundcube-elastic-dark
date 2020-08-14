@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.14
+@version     2.0.15
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -51,10 +51,19 @@
     #layout-list,
     #layout-sidebar,
     #layout-content,
+    .mce-tabs,
+    .mce-panel,
+    .mce-window .mce-reset,
+    .mce-floatpanel.mce-popover,
+    .mce-menu-item.mce-disabled,
+    .mce-tabs + .mce-container-body,
+    .mce-menu-item.mce-disabled:hover,
+    .mce-window .mce-combobox .mce-btn,
     .ui-widget-content,
     .task-login #messagestack div,
     .task-login #messagestack .loading,
-    .popover .menu .dropbutton a.dropdown {
+    .popover .menu .dropbutton a.dropdown,
+    i.mce-i-checkbox {
         background-color: var(--new-black-3);
     }
     #messagestack .alert-warning,
@@ -73,6 +82,8 @@
     .listing-info,
     .formcontent .hint,
     .file-upload .hint,
+    .message-part span.sig,
+    .form-control::placeholder,
     .custom-control-input:disabled ~ .custom-control-label {
         color: var(--new-white-2);
     }
@@ -82,10 +93,20 @@
     .btn-primary:not(:disabled):not(.disabled):active,
     .btn-primary:not(:disabled):not(.disabled).active,
     .btn-secondary:not(:disabled):not(.disabled):active,
-    .btn-secondary:not(:disabled):not(.disabled).active {
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .image-selector button:hover,
+    .image-selector button:not(:disabled):not(.disabled):active,
+    .image-selector button:not(:disabled):not(.disabled).active,
+    .mce-window .mce-foot .mce-btn:hover,
+    .mce-window .mce-foot .mce-btn.mce-primary:hover,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active {
         background: var(--new-blue-2);
         border-color: var(--new-blue-2);
     }
+    .nav-tabs,
     .listing li,
     .listing tbody td,
     .ui-datepicker .ui-datepicker-header,
@@ -94,7 +115,12 @@
     html.layout-phone .popover:not(.select-menu) .listing li:last-child {
         border-bottom: 1px solid var(--new-black-4);
     }
+    .image-tools,
     .quota-widget .value,
+    .mce-charmap td:hover,
+    .mce-menu-item:hover,
+    .mce-menu-item:focus,
+    .mce-menu-item.mce-selected,
     .menu a:not(.disabled):focus,
     .menu a:not(.disabled):hover,
     .popover .menu .dropbutton a.dropdown:hover,
@@ -109,7 +135,15 @@
     .btn-primary:not(:disabled):not(.disabled).active:focus,
     .btn-secondary:not(:disabled):not(.disabled):active:focus,
     .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
+    .custom-switch .custom-control-input:focus ~ .custom-control-label:before,
+    .image-selector button:focus,
+    .image-selector button:not(:disabled):not(.disabled):active:focus,
+    .image-selector button:not(:disabled):not(.disabled).active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:focus,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active:focus,
+    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active:focus,
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active:focus {
         box-shadow: 0 0 0 .2rem var(--new-blue-5);
     }
     .btn,
@@ -117,6 +151,7 @@
     .quota-widget,
     .quota-widget .count,
     .message-partheaders,
+    .recipient-input input,
     .form-control-plaintext,
     .readonly .input-group-text,
     .readonly .form-control-plaintext,
@@ -132,6 +167,28 @@
     .listing tbody td a,
     .listing li.disabled,
     .listing tr.disabled td,
+    .mce-ico,
+    .mce-reset,
+    .mce-widget,
+    .mce-widget *,
+    .mce-container,
+    .mce-container *,
+    .mce-btn button,
+    .mce-btn .mce-txt,
+    .mce-content-body,
+    .mce-window .mce-label,
+    .mce-window .mce-textbox,
+    .mce-menu-item:hover .mce-ico,
+    .mce-menu-item:focus .mce-ico,
+    .mce-menu-item:hover .mce-text,
+    .mce-menu-item:focus .mce-text,
+    .mce-menu-item.mce-selected .mce-ico,
+    .mce-menu-item.mce-selected .mce-text,
+    .mce-window .mce-foot .mce-btn button,
+    .mce-window .mce-foot .mce-btn button:hover,
+    .mce-window .mce-window-head .mce-title,
+    .mce-window .mce-window-head .mce-close,
+    .html-editor .editor-toolbar .mce-i-html,
     .ui.alert,
     .ui.alert > i.icon,
     .ui-datepicker .ui-state-default,
@@ -180,11 +237,16 @@
     .listing tr.selected td,
     .popover .menu li a:not(.disabled):hover,
     .popupmenu .listing li > a:not(.disabled):hover,
+    .ui-datepicker .ui-state-highlight,
+    .ui-datepicker .ui-datepicker-days-cell-over a,
+    .ui-datepicker.ui-widget-content .ui-state-highlight,
+    .ui-datepicker .ui-datepicker-days-cell-over a.ui-state-default,
     ul.treelist li.selected > a,
     ul.treelist li.selected > div > a {
         color: var(--new-white-1);
         background-color: var(--new-blue-1);
     }
+    .mce-window .mce-tabs .mce-tab,
     .input-group .add.input-group-text:hover,
     .input-group .edit.input-group-text:hover,
     .input-group .reset.input-group-text:hover,
@@ -196,20 +258,81 @@
     .menu.pagenav.pagenav-list + .navlist {
         background-color: var(--new-black-2);
     }
-    
+    .btn-primary,
+    .mce-splitbtn.mce-opened,
+    .html-editor .editor-toolbar .mce-i-html:focus,
+    .html-editor .editor-toolbar .mce-i-html:hover,
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before,
+    .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: var(--new-blue-1);
+        border-color: var(--new-blue-1);
+    }
+    .searchbar,
+    .html-editor .editor-toolbar {
+        background-color: var(--new-black-3);
+        border-bottom: 1px solid var(--new-black-4);
+    }
+    .recipient-input .recipient,
+    .custom-control-label::before,
+    p.image-attachment {
+        background-color: var(--new-black-4);
+        border: 1px solid var(--new-black-4);
+    }
+    .mce-foot .mce-btn,
+    .mce-window .mce-tabs,
+    .mce-tinymce .mce-panel,
+    .mce-window-body .mce-btn,
+    .mce-tinymce.mce-container.mce-panel,
+    .propform.groupped .row.input-group .content input {
+        border-color: var(--new-black-4);
+    }
+    .multi-input .input-group-text,
+    .mce-btn-group:not(:first-child) {
+        border-left: 1px solid var(--new-black-4);
+    }
+    .ui.alert.boxwarning,
+    .ui.alert.boxinformation,
+    i.mce-i-backcolor {
+        background-color: var(--new-black-4);
+    }
+    .mce-btn.mce-active,
+    .ui-state-active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover,
+    .ui-widget-header .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    a.ui-button:active {
+        background: var(--new-blue-1) !important;
+    }
+    .ui-widget,
+    .mce-charmap td,
+    .mce-combobox input,
+    .multi-input > .content,
+    .mce-grid td.mce-grid-cell div {
+        border: 1px solid var(--new-black-4);
+    }
+    .mce-grid-border a,
+    .rcmBody table[style],
+    .rcmBody table[style] td,
+    .mce-content-body table[style],
+    .mce-content-body table[style] td {
+        border-color: var(--new-white-2);
+    }
+    .image-tools a:focus,
+    .image-tools a:hover,
+    .ui-datepicker a.ui-state-active {
+        background-color: var(--new-blue-2) !important;
+    }
+
     /* LOGIN */
 
     .task-login #layout-content {
         background: var(--new-black-1);
     }
-    .btn-primary {
-        background: var(--new-blue-1);
-        border-color: var(--new-blue-1);
-    }
     .btn-primary:hover {
         background: var(--new-blue-2);
         border-color: var(--new-blue-2);
-        color: var(--new-white-1) !important; /* MEDIAQUERY 769px */
+        color: var(--new-white-1) !important;
     }
     .form-control,
     .input-group-text {
@@ -221,9 +344,6 @@
         background-color: var(--new-black-3);
         color: var(--new-white-1);
     }
-    .form-control::placeholder {
-        color: var(--new-white-2);
-    }
 
     /* TOP PANEL */
     
@@ -234,8 +354,8 @@
     }
     .popover {
         background-color: var(--new-black-2);
-        box-shadow: none; /* SEARCH */
-        border-color: var(--new-black-4); /* SEARCH */
+        box-shadow: none;
+        border-color: var(--new-black-4);
     }
     #taskmenu a {
         border-bottom: 1px solid var(--new-black-4) !important;
@@ -251,30 +371,14 @@
     a.disabled:not(.btn) {
         opacity: 0.6;
     }
-    .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
-        border-color: var(--new-blue-1);
-        background-color: var(--new-blue-1);
-    }
     
     /* SEARCH */
     
-    .searchbar {
-        background-color: var(--new-black-3);
-        border-bottom: 1px solid var(--new-black-4);
-    }
     .custom-switch .custom-control-input:checked:disabled ~ .custom-control-label::before {
         border-color: var(--new-blue-5);
         background-color: var(--new-blue-5);
     }
-    .custom-control-label::before {
-        background-color: var(--new-black-4);
-        border: 1px solid var(--new-black-4);
-    }
     .custom-switch .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-        border-color: var(--new-blue-1);
-    }
-    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-        background-color: var(--new-blue-1);
         border-color: var(--new-blue-1);
     }
     
@@ -313,70 +417,13 @@
         border-color: var(--new-blue-1);
         color: var(--new-white-1) !important;
     }
-    .mce-ico,
-    .mce-reset,
-    .mce-widget,
-    .mce-widget *,
-    .mce-container,
-    .mce-container *,
-    .mce-btn button,
-    .mce-btn .mce-txt,
-    .mce-content-body,
-    .recipient-input input,
-    .mce-window .mce-label,
-    .mce-window .mce-textbox,
-    .mce-menu-item:hover .mce-ico,
-    .mce-menu-item:focus .mce-ico,
-    .mce-menu-item:hover .mce-text,
-    .mce-menu-item:focus .mce-text,
-    .mce-menu-item.mce-selected .mce-ico,
-    .mce-menu-item.mce-selected .mce-text,
-    .mce-window .mce-foot .mce-btn button,
-    .mce-window .mce-foot .mce-btn button:hover,
-    .mce-window .mce-window-head .mce-title,
-    .mce-window .mce-window-head .mce-close,
-    .html-editor .editor-toolbar .mce-i-html {
-        color: var(--new-white-1);
-    }
     select:-moz-focusring {
         color: var(--new-white-1) !important;
         text-shadow: none !important;
     }
-    .recipient-input .recipient {
-        border: 1px solid var(--new-black-4);
-        background-color: var(--new-black-4);
-    }
-    .html-editor .editor-toolbar {
-        border-bottom: 1px solid var(--new-black-4);
-        background-color: var(--new-black-3);
-    }
-    .mce-splitbtn.mce-opened,
-    .html-editor .editor-toolbar .mce-i-html:focus,
-    .html-editor .editor-toolbar .mce-i-html:hover {
-        border-color: var(--new-blue-1);
-        background-color: var(--new-blue-1);
-    }
-    .mce-foot .mce-btn,
-    .mce-window .mce-tabs,
-    .mce-tinymce .mce-panel,
-    .mce-window-body .mce-btn,
-    .mce-tinymce.mce-container.mce-panel {
-        border-color: var(--new-black-4);
-    }
     .mce-tinymce.focused {
         border-color: var(--new-blue-1) !important;
         box-shadow: 0 0 0 .1rem var(--new-blue-5) !important;
-    }
-    .mce-tabs,
-    .mce-panel,
-    .mce-window .mce-reset,
-    .mce-floatpanel.mce-popover,
-    .mce-menu-item.mce-disabled,
-    .mce-tabs + .mce-container-body,
-    .mce-menu-item.mce-disabled:hover,
-    .mce-window .mce-combobox .mce-btn,
-    i.mce-i-checkbox {
-        background-color: var(--new-black-3);
     }
     .mce-tinymce .mce-btn,
     .mce-tinymce .mce-panel,
@@ -385,14 +432,8 @@
     .mce-menu-item.mce-active.mce-menu-item-normal {
         background-color: var(--new-black-5);
     }
-    .mce-btn-group:not(:first-child) {
-        border-left: 1px solid var(--new-black-4);
-    }
     .mce-caret {
         border-top: 4px solid var(--new-white-1);
-    }
-    i.mce-i-backcolor {
-        background: var(--new-black-4);
     }
     .mce-colorbutton .mce-preview {
         background: var(--new-white-1);
@@ -410,9 +451,6 @@
     .mce-splitbtn:hover .mce-open {
         border-left: 1px solid var(--new-blue-1);
     }
-    .mce-btn.mce-active {
-        background: var(--new-blue-1) !important;
-    }
     .mce-menu,
     .mce-floatpanel.mce-popover {
         box-shadow: 3px 3px 5px var(--new-black-5) !important;
@@ -421,22 +459,8 @@
     .mce-floatpanel.mce-popover.mce-bottom > .mce-arrow::after {
         border-bottom-color: var(--new-black-3);
     }
-    .mce-charmap td,
-    .mce-combobox input,
-    .mce-grid td.mce-grid-cell div {
-        border: 1px solid var(--new-black-4);
-    }
-    .mce-charmap td:hover,
-    .mce-menu-item:hover,
-    .mce-menu-item:focus,
-    .mce-menu-item.mce-selected {
-        background: var(--new-blue-1);
-    }
     .mce-menu-item .mce-caret {
         border-left: 4px solid var(--new-white-1);
-    }
-    .mce-grid-border a {
-        border-color: var(--new-white-2);
     }
     .mce-grid-border a:hover,
     .mce-grid-border a.mce-active {
@@ -458,28 +482,6 @@
         color: var(--new-white-1);
         background: var(--new-blue-1);
         border-color: var(--new-blue-1);
-    }
-    .image-selector button:hover,
-    .image-selector button:not(:disabled):not(.disabled):active,
-    .image-selector button:not(:disabled):not(.disabled).active,
-    .mce-window .mce-foot .mce-btn:hover,
-    .mce-window .mce-foot .mce-btn.mce-primary:hover,
-    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active,
-    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active,
-    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active,
-    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active {
-        background: var(--new-blue-2);
-        border-color: var(--new-blue-2);
-    }
-    .image-selector button:focus,
-    .image-selector button:not(:disabled):not(.disabled):active:focus,
-    .image-selector button:not(:disabled):not(.disabled).active:focus,
-    .mce-window .mce-foot .mce-btn.mce-primary:focus,
-    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active:focus,
-    .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active:focus,
-    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active:focus,
-    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active:focus {
-        box-shadow: 0 0 0 .2rem var(--new-blue-5);
     }
     .mce-window .mce-foot .mce-btn:focus {
         color: var(--new-white-1);
@@ -508,9 +510,6 @@
     .mce-tab {
         text-shadow: none;
     }
-    .mce-window .mce-tabs .mce-tab {
-        color: var(--new-blue-3);
-    }
     .mce-window .mce-tabs .mce-tab:not(.mce-active):hover {
         border: 1px solid var(--new-black-4);
         border-bottom: 0;
@@ -533,10 +532,6 @@
     .mce-content-body blockquote {
         border-left: 2px solid var(--new-blue-3);
     }
-    .mce-content-body table[style],
-    .mce-content-body table[style] td {
-        border-color: var(--new-white-2);
-    }
     
     /* MESSAGES */
     
@@ -544,23 +539,12 @@
         background-color: var(--new-black-5);
         border: 8px solid var(--new-black-5);
     }
-    .ui.alert.boxwarning,
-    .ui.alert.boxinformation {
-        background-color: var(--new-black-4);
-    }
-    p.image-attachment {
-        border: 1px solid var(--new-black-4);
-        background-color: var(--new-black-4);
-    }
     .message-partheaders {
         border-top: 1px solid var(--new-black-4);
         border-bottom: 1px solid var(--new-black-4);
     }
     #messagebody .rcmBody p[style] {
         color: var(--new-white-2) !important;
-    }
-    .message-part span.sig {
-        color: var(--new-white-2);
     }
     .message-part blockquote,
     .message-htmlpart blockquote {
@@ -570,39 +554,12 @@
         border-right: 0;
         padding: .6em .8em;
     }
-    .rcmBody table[style],
-    .rcmBody table[style] td {
-        border-color: var(--new-white-2);
-    }
-    .image-tools {
-        background-color: var(--new-blue-1);
-    }
     .image-tools a {
         color: var(--new-white-1) !important;
-    }
-    .image-tools a:focus,
-    .image-tools a:hover {
-        background-color: var(--new-blue-2) !important;
     }
     
     /* BOOK ADDRESS */
     
-    .ui-widget {
-        border: 1px solid var(--new-black-4);
-    }
-    .ui-datepicker .ui-state-highlight,
-    .ui-datepicker .ui-datepicker-days-cell-over a,
-    .ui-datepicker.ui-widget-content .ui-state-highlight,
-    .ui-datepicker .ui-datepicker-days-cell-over a.ui-state-default {
-        background: var(--new-blue-1);
-        color: var(--new-white-1);
-    }
-    .ui-datepicker a.ui-state-active {
-        background: var(--new-blue-2) !important;
-    }
-    .nav-tabs {
-        border-bottom: 1px solid var(--new-black-4);
-    }
     .nav-tabs .nav-link.active,
     .nav-tabs .nav-item.show .nav-link {
         color: var(--new-white-1);
@@ -616,9 +573,6 @@
         border-color: var(--new-black-4) var(--new-black-4) var(--new-black-4);
         background-color: var(--new-black-5);
     }
-    .propform.groupped .row.input-group .content input {
-        border-color: var(--new-black-4);
-    }
     .input-group-text input:focus {
         border-color: var(--new-blue-1) !important;
     }
@@ -628,22 +582,8 @@
     .btn:hover {
         color: var(--new-blue-4);
     }
-    a.ui-button:active,
-    .ui-state-active,
-    .ui-button:active,
-    .ui-button.ui-state-active:hover,
-    .ui-widget-header .ui-state-active,
-    .ui-widget-content .ui-state-active {
-        background: var(--new-blue-1) !important;
-    }
     .custom-select {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23e9e9e9' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
-    }
-    .multi-input > .content {
-        border: 1px solid var(--new-black-4);
-    }
-    .multi-input .input-group-text {
-        border-left: 1px solid var(--new-black-4);
     }
     .btn,
     .form-control,
