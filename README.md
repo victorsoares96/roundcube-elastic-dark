@@ -4,7 +4,7 @@ Dark theme for the Elastic skin.
 
 A theme made on the version of Roundcube Webmail 1.4.5.
 
-<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-4.png"><img src="assets/mail-4.png" width="600" alt=""></a>
+<a href="https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/assets/mail-7.png"><img src="assets/mail-7.png" width="600" alt=""></a>
 
 ## Installation
 
