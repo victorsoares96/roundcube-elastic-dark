@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.17
+@version     2.0.18
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -48,9 +48,6 @@
     
     /* COMBINED STYLES */
 
-    #layout-list,
-    #layout-sidebar,
-    #layout-content,
     .mce-tabs,
     .mce-panel,
     .mce-window .mce-reset,
@@ -59,15 +56,18 @@
     .mce-tabs + .mce-container-body,
     .mce-menu-item.mce-disabled:hover,
     .mce-window .mce-combobox .mce-btn,
-    .ui-widget-content,
     .task-login #messagestack div,
     .task-login #messagestack .loading,
     .popover .menu .dropbutton a.dropdown,
+    .ui-widget-content,
+    #layout-list,
+    #layout-sidebar,
+    #layout-content,
     i.mce-i-checkbox {
         background-color: var(--new-black-3);
     }
-    #messagestack .alert-warning,
-    .task-login #messagestack .alert-warning {
+    .task-login #messagestack .alert-warning,
+    #messagestack .alert-warning {
         background-color: var(--new-orange-1);
         color: var(--new-white-1);
     }
@@ -78,13 +78,13 @@
         border-color: var(--new-blue-1);
         box-shadow: 0 0 .2rem .1rem var(--new-blue-5);
     }
-    #login-footer,
     .listing-info,
     .formcontent .hint,
     .file-upload .hint,
     .message-part span.sig,
     .form-control::placeholder,
-    .custom-control-input:disabled ~ .custom-control-label {
+    .custom-control-input:disabled ~ .custom-control-label,
+    #login-footer {
         color: var(--new-white-2);
     }
     .btn-secondary:hover,
@@ -135,7 +135,6 @@
     .btn-primary:not(:disabled):not(.disabled).active:focus,
     .btn-secondary:not(:disabled):not(.disabled):active:focus,
     .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .custom-switch .custom-control-input:focus ~ .custom-control-label:before,
     .image-selector button:focus,
     .image-selector button:not(:disabled):not(.disabled):active:focus,
     .image-selector button:not(:disabled):not(.disabled).active:focus,
@@ -143,18 +142,20 @@
     .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled):active:focus,
     .mce-window .mce-foot .mce-btn:not(:disabled):not(.disabled).active:focus,
     .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled):active:focus,
-    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active:focus {
+    .mce-window .mce-foot .mce-btn.mce-primary:not(:disabled):not(.disabled).active:focus,
+    .custom-switch .custom-control-input:focus ~ .custom-control-label:before {
         box-shadow: 0 0 0 .2rem var(--new-blue-5);
     }
     .btn,
     .table,
-    .quota-widget,
-    .quota-widget .count,
     .message-partheaders,
     .recipient-input input,
     .form-control-plaintext,
-    .readonly .input-group-text,
-    .readonly .form-control-plaintext,
+    .html-editor .editor-toolbar .mce-i-html,
+    .ui.alert,
+    .ui.alert > i.icon,
+    .quota-widget,
+    .quota-widget .count,
     .searchbar a,
     .searchbar input,
     .searchbar form::before,
@@ -188,15 +189,12 @@
     .mce-window .mce-foot .mce-btn button:hover,
     .mce-window .mce-window-head .mce-title,
     .mce-window .mce-window-head .mce-close,
-    .html-editor .editor-toolbar .mce-i-html,
-    .ui.alert,
-    .ui.alert > i.icon,
+    .readonly .input-group-text,
+    .readonly .form-control-plaintext,
     .ui-datepicker .ui-state-default,
     .ui-datepicker.ui-widget-content .ui-state-default,
     .attachmentslist li .attachment-name,
     .attachmentslist li .attachment-size,
-    .popover .menu li a[aria-haspopup]::after,
-    .popover .menu li a[aria-haspopup].dropdown::after,
     .messagelist tr.flagged td,
     .messagelist td.subject span.date,
     .messagelist span.attachment span,
@@ -204,13 +202,15 @@
     .messagelist tr.flagged td.subject span.date,
     .messagelist tr.flagged td.subject span.fromto,
     .messagelist tr.flagged td.subject span.subject a,
+    .popover .menu li a[aria-haspopup]::after,
+    .popover .menu li a[aria-haspopup].dropdown::after,
     .ui-dialog .ui-dialog-title,
     .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-primary,
     .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-secondary,
-    p.image-attachment span,
     #message-htmlpart1 div.rcmBody,
     #layout > div > .header a.button,
-    #messagestack .alert-warning > i.icon:before {
+    #messagestack .alert-warning > i.icon:before,
+    p.image-attachment span {
         color: var(--new-white-1);
     }
     #messagestack div,
@@ -219,8 +219,8 @@
     html.layout-phone .popover-header {
         background-color: var(--new-black-1);
     }
-    #layout > div > .footer,
-    .ui-dialog .ui-dialog-buttonpane {
+    .ui-dialog .ui-dialog-buttonpane,
+    #layout > div > .footer {
         background-color: var(--new-black-2);
         border-top: 1px solid var(--new-black-4);
     }
@@ -308,15 +308,15 @@
         background: var(--new-blue-1) !important;
     }
     .ui-widget,
+    .multi-input > .content,
     .mce-charmap td,
     .mce-combobox input,
-    .multi-input > .content,
     .mce-grid td.mce-grid-cell div {
         border: 1px solid var(--new-black-4);
     }
-    .mce-grid-border a,
     .rcmBody table[style],
     .rcmBody table[style] td,
+    .mce-grid-border a,
     .mce-content-body table[style],
     .mce-content-body table[style] td {
         border-color: var(--new-white-2);
@@ -416,8 +416,8 @@
         color: var(--new-white-1);
         box-shadow: none;
     }
-    html.layout-phone .messagelist td.flags .flag,
-    html.touch .messagelist td.flags .flag {
+    html.touch .messagelist td.flags .flag,
+    html.layout-phone .messagelist td.flags .flag {
         visibility: visible;
     }
     .messagelist tr.flagged td.flags .flag {
@@ -463,8 +463,8 @@
         border-top: 4px solid var(--new-white-1);
     }
     .mce-btn:hover,
-    .mce-btn:active,
-    .mce-btn:focus {
+    .mce-btn:focus,
+    .mce-btn:active {
         background: var(--new-blue-1);
         color: var(--new-white-1);
         border-color: var(--new-black-5);
@@ -581,20 +581,20 @@
     .rcmBody table[style] td {
         padding: 10px;
     }
-    .bs-popover-auto[x-placement^="right"] > .arrow::before,
-    .bs-popover-right > .arrow::before {
+    .bs-popover-right > .arrow::before,
+    .bs-popover-auto[x-placement^="right"] > .arrow::before {
         border-right-color: var(--new-black-4);
     }
-    .bs-popover-auto[x-placement^="right"] > .arrow::after,
-    .bs-popover-right > .arrow::after {
+    .bs-popover-right > .arrow::after,
+    .bs-popover-auto[x-placement^="right"] > .arrow::after {
         border-right-color: var(--new-black-2);
     }
-    .bs-popover-auto[x-placement^="left"] > .arrow::before,
-    .bs-popover-left > .arrow::before {
+    .bs-popover-left > .arrow::before,
+    .bs-popover-auto[x-placement^="left"] > .arrow::before {
         border-left-color: var(--new-black-4);
     }
-    .bs-popover-auto[x-placement^="left"] > .arrow::after,
-    .bs-popover-left > .arrow::after {
+    .bs-popover-left > .arrow::after,
+    .bs-popover-auto[x-placement^="left"] > .arrow::after {
         border-left-color: var(--new-black-2);
     }
     
@@ -629,8 +629,9 @@
     }
     .btn,
     .form-control,
-    .custom-control-label::before,
-    .custom-file-label, .custom-select {
+    .custom-select,
+    .custom-file-label,
+    .custom-control-label::before {
         transition: none;
     }
 
@@ -737,28 +738,28 @@
         .menu.toolbar .dropbutton a.dropdown:hover {
             background-color: var(--new-blue-2);
         }
-        .bs-popover-auto[x-placement^="bottom"] > .arrow::before, 
-        .bs-popover-bottom > .arrow::before {
+        .bs-popover-bottom > .arrow::before,
+        .bs-popover-auto[x-placement^="bottom"] > .arrow::before {
             border-bottom-color: var(--new-black-4);
         }
-        .bs-popover-auto[x-placement^="bottom"] > .arrow::after,
-        .bs-popover-bottom > .arrow::after {
+        .bs-popover-bottom > .arrow::after,
+        .bs-popover-auto[x-placement^="bottom"] > .arrow::after {
             border-bottom-color: var(--new-black-2);
         }
-        .bs-popover-auto[x-placement^="left"] > .arrow::before, 
-        .bs-popover-left > .arrow::before {
+        .bs-popover-left > .arrow::before,
+        .bs-popover-auto[x-placement^="left"] > .arrow::before {
             border-left-color: var(--new-black-4);
         }
-        .bs-popover-auto[x-placement^="left"] > .arrow::after,
-        .bs-popover-left > .arrow::after {
+        .bs-popover-left > .arrow::after,
+        .bs-popover-auto[x-placement^="left"] > .arrow::after {
             border-left-color: var(--new-black-2);
         }
-        .bs-popover-auto[x-placement^="right"] > .arrow::before, 
-        .bs-popover-right > .arrow::before {
+        .bs-popover-right > .arrow::before,
+        .bs-popover-auto[x-placement^="right"] > .arrow::before {
             border-right-color: var(--new-black-4);
         }
-        .bs-popover-auto[x-placement^="right"] > .arrow::after,
-        .bs-popover-right > .arrow::after {
+        .bs-popover-right > .arrow::after,
+        .bs-popover-auto[x-placement^="right"] > .arrow::after {
             border-right-color: var(--new-black-2);
         }
         
@@ -770,12 +771,12 @@
 
         /* BOTTOM PANEL */
         
-        .bs-popover-auto[x-placement^="top"] > .arrow::before,
-        .bs-popover-top > .arrow::before {
+        .bs-popover-top > .arrow::before,
+        .bs-popover-auto[x-placement^="top"] > .arrow::before {
             border-top-color: var(--new-black-4);
         }
-        .bs-popover-auto[x-placement^="top"] > .arrow::after,
-        .bs-popover-top > .arrow::after {
+        .bs-popover-top > .arrow::after,
+        .bs-popover-auto[x-placement^="top"] > .arrow::after {
             border-top-color: var(--new-black-2);
         }
     }
