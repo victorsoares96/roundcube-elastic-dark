@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.20
+@version     2.0.21
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -77,6 +77,11 @@
     .custom-file-input:focus ~ .custom-file-label {
         border-color: var(--new-blue-1);
         box-shadow: 0 0 .2rem .1rem var(--new-blue-5);
+    }
+    .form-control:focus,
+    .recipient-input.focus {
+        background-color: var(--new-black-3);
+        color: var(--new-white-1);
     }
     .listing-info,
     .formcontent .hint,
@@ -367,10 +372,6 @@
         color: var(--new-white-1);
         background-color: var(--new-black-5);
         border: 1px solid var(--new-black-4);
-    }
-    .form-control:focus {
-        background-color: var(--new-black-3);
-        color: var(--new-white-1);
     }
 
     /* TOP PANEL */
