@@ -2,7 +2,7 @@
 @name        Roundcube Elastic Dark
 @namespace   Skorpion
 @author      Skorpion
-@version     2.0.19
+@version     2.0.20
 @homepageURL https://github.com/Skorpion/roundcube-elastic-dark
 @updateURL   https://raw.githubusercontent.com/Skorpion/roundcube-elastic-dark/master/styles/main_doc.user.css
 @supportURL  https://github.com/Skorpion/roundcube-elastic-dark/issues
@@ -109,6 +109,7 @@
     .nav-tabs,
     .listing li,
     .listing tbody td,
+    .mce-menu .mce-menu-item,
     .ui-datepicker .ui-datepicker-header,
     .menu.pagenav.pagenav-list.expanded + .navlist,
     html.layout-small .popover:not(.select-menu) .listing li:last-child,
@@ -124,7 +125,8 @@
     .menu a:not(.disabled):focus,
     .menu a:not(.disabled):hover,
     .popover .menu .dropbutton a.dropdown:hover,
-    .popover .menu .dropbutton:not(.disabled):hover {
+    .popover .menu .dropbutton:not(.disabled):hover,
+    .mce-menu-item.mce-menu-item-preview.mce-active:hover {
         background-color: var(--new-blue-1);
     }
     .btn:focus,
@@ -183,12 +185,17 @@
     .mce-menu-item:focus .mce-ico,
     .mce-menu-item:hover .mce-text,
     .mce-menu-item:focus .mce-text,
+    .mce-menu .mce-menu-item .mce-text,
     .mce-menu-item.mce-selected .mce-ico,
     .mce-menu-item.mce-selected .mce-text,
     .mce-window .mce-foot .mce-btn button,
     .mce-window .mce-foot .mce-btn button:hover,
     .mce-window .mce-window-head .mce-title,
     .mce-window .mce-window-head .mce-close,
+    .mce-menu-item.mce-menu-item-preview.mce-active .mce-ico,
+    .mce-menu-item.mce-menu-item-preview.mce-active .mce-text,
+    .mce-window .mce-foot .mce-container-body .mce-btn button,
+    .mce-menu .mce-menu-item.mce-menu-item-preview.mce-active::after,
     .readonly .input-group-text,
     .readonly .form-control-plaintext,
     .ui-datepicker .ui-state-default,
@@ -258,10 +265,13 @@
     }
     .iframe-loader,
     .ui-widget-header,
+    .mce-window .mce-foot,
+    .mce-window .mce-window-head,
     .menu.pagenav.pagenav-list + .navlist {
         background-color: var(--new-black-2);
     }
     .btn-primary,
+    .image-selector button,
     .mce-splitbtn.mce-opened,
     .html-editor .editor-toolbar .mce-i-html:focus,
     .html-editor .editor-toolbar .mce-i-html:hover,
@@ -332,6 +342,7 @@
     }
     .table td,
     .table th,
+    .mce-window .mce-foot,
     ul.listing li ul {
         border-top: 1px solid var(--new-black-4);
     }
@@ -500,12 +511,16 @@
         border-color: var(--new-blue-1);
         box-shadow: 0 0 0 .1rem var(--new-blue-5);
     }
-    .image-selector button,
-    .mce-window .mce-foot .mce-btn,
-    .mce-window .mce-foot .mce-btn.mce-primary {
+    .image-selector button {
         color: var(--new-white-1);
         background: var(--new-blue-1);
         border-color: var(--new-blue-1);
+    }
+    .mce-window .mce-foot .mce-btn,
+    .mce-window .mce-foot .mce-btn.mce-primary {
+        color: var(--new-white-1);
+        background: var(--new-black-2);
+        border-color: var(--new-black-2);
     }
     .mce-window .mce-foot .mce-btn:focus {
         color: var(--new-white-1);
@@ -551,6 +566,18 @@
     }
     .mce-content-body blockquote {
         border-left: 2px solid var(--new-blue-3);
+    }
+    .mce-menu-item.mce-menu-item-preview.mce-active {
+        background: var(--new-blue-2);
+    }
+    .mce-charmap td {
+        border-bottom: 1px solid var(--new-black-4) !important;
+    }
+    #composestatusbar {
+        opacity: 1;
+    }
+    .mce-menu-item.mce-menu-item-preview.mce-active {
+        border-left: 5px solid var(--new-blue-1);
     }
     
     /* MESSAGES */
@@ -719,6 +746,15 @@
         .form-control:disabled,
         .form-control[readonly] {
             background-color: var(--new-black-5);
+        }
+        
+        /* CREATE MESSAGES */
+
+        .mce-window .mce-foot .mce-btn,
+        .mce-window .mce-foot .mce-btn.mce-primary {
+            color: var(--new-white-1);
+            background: var(--new-blue-1);
+            border-color: var(--new-blue-1);
         }
     }
     
